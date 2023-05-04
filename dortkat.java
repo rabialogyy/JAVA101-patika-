@@ -9,7 +9,7 @@ public class dortkat {
             System.out.println("sayı giriniz:");
             n = scan.nextInt();
             if ( n % 4 == 0) {
-                sum += n; // varsayılan deger yoksa // toplam 0 verseydik sum+=n; seklinde olurdu.
+                sum += n; // varsayılan deger yoksa //  sum=sum+n; seklinde olurdu.
             }
         } while (n % 2 != 1);
         System.out.println("toplam:" + sum);

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class mukemmel {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int n, result = 0;
+        int n, total = 0;
 
         System.out.print("Bir sayı giriniz:");
         n = input.nextInt();
@@ -11,10 +11,10 @@ public class mukemmel {
 
         for (int i = 1; i < n; i++) {
             if (n % i == 0) {
-                result = result + i;
+                total = total + i;
             }
         }
-        if (n == result) {
+        if (n == total) {
 
             System.out.println(n + " Mükemmel sayıdır.");
         } else {

@@ -1,5 +1,5 @@
 
-public class Main {
+public class OBS {
     public static void main(String[] args) {
         Teacher t1 = new Teacher("Mahmut ","TRH","5555");
         Teacher t2 = new Teacher("Alev", "FZK", "0000");

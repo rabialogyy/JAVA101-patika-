@@ -1,42 +1,33 @@
-import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("hello");
-        // pratıkler
+        Teacher t1 = new Teacher("Mahmut ","TRH","5555");
+        Teacher t2 = new Teacher("Alev", "FZK", "0000");
+        Teacher t3=new Teacher("Sema","BIO","111");
 
-        int mat, fizik, kimya, turkce, tarih,muzik;
-         Scanner inp= new Scanner(System.in);
+        Course tarih = new Course("Tarih", "101", "TRH");
+        Course tarihS=new Course("tarihS","101","TRH");
 
-        System.out.println("Matematık notunuz: ");
-        mat = inp.nextInt();
+        Course fizik=new Course("Fizik","102","FZK");
+        Course fizikS=new Course("Fizik","102","FZK");
 
-        System.out.println("Fizik notunuz: ");
-        fizik = inp.nextInt();
-
-        System.out.println("Kimya notunuz :");
-        kimya= inp.nextInt();
-
-
-        System.out.println("Türkce notunuz :");
-        turkce= inp.nextInt();
-
-        System.out.println("Tarih Notunuzu Giriniz");
-        tarih = inp.nextInt();
-
-        System.out.println("Müzik notunuz :");
-        muzik = inp.nextInt();
-          int toplam= (mat+ fizik+kimya+turkce+muzik);
-          double sonuc= toplam/6;
-
-        System.out.println("ortalamanız :" +sonuc);
-
-        String durum = sonuc >= 60 ? "Sınıfı Geçtiniz" : "Sınıfta Kaldınız";
-        System.out.println(durum);
+        Course biyo=new Course("Biyoloji","101","BIO");
+        Course biyoS=new Course("Biyoloji","101","BIO");
 
 
 
 
+        Student s1=new Student("Rabia","123","4",tarih,fizik,biyo,tarihS,fizikS,biyoS);
+        s1.addBulkExamNote(100,78,50,60,75,80);
+        s1.isPass();
 
 
+        Student s2=new Student("Zehra","444","4",tarih,fizik,biyo,tarihS,fizikS,biyoS);
+        s2.addBulkExamNote(50,30,70,50,55,60);
+        s2.isPass();
+
+        Student s3=new Student("Seyfullah","362","4",tarih,fizik,biyo,tarihS,fizikS,biyoS);
+        s3.addBulkExamNote(50,60,70,80,90,60);
+        s3.isPass();
     }
-    }
+}
